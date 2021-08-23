@@ -22,3 +22,12 @@ jobs:
       run: npm install
     - name: Test
       run: npm run unit
+    - name: e2e
+      run: npm run e2e
+    - name: Submit results to Xray
+      env:
+        JIRA_SERVER_URL: ${{ secrets.jira_server_url }}
+        JIRA_USERNAME: ${{ secrets.jira_username }}
+        JIRA_PASSWORD: ${{ secrets.jirapassword }}
+      run: 'curl -H "Content-Type: multipart/form-data" -u $JIRA_USERNAME:$JIRA_PASSWORD -F "file=@target/test/e2e/CHROME_92.0.4515.159_undefined_eglogin.spec.xml" "$JIRA_SERVER_URL/rest/raven/1.0/import/execution/junit?projectKey=ESM"'
+
