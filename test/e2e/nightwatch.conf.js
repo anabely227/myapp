@@ -7,6 +7,7 @@ module.exports = {
   output_folder: 'test/e2e/reports',
   page_objects_path: ['test/e2e/page-objects'],
   custom_assertions_path: ['test/e2e/custom-assertions'],
+  skip_testcases_on_fail: false,
 
   selenium: {
     start_process: true,
@@ -24,8 +25,15 @@ module.exports = {
       selenium_host: 'localhost',
       silent: true,
       globals: {
+        waitForConditionTimeout: 5000,
         devServerURL: 'http://localhost:' + (process.env.PORT || config.dev.port)
-      }
+      },
+      screenshots: {
+        enabled: true,
+        path: "test/e2e/screenshots",
+        on_failure: true,
+        on_error: true
+      },
     },
 
     chrome: {

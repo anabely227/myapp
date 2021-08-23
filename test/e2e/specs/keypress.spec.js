@@ -13,5 +13,7 @@ module.exports = {
       .assert.visible('@inputName')
       .setValue('@inputName','nightwatch')
       .click('@submit')
+
+      browser.end();
   }
 }
