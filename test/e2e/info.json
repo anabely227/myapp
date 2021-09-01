@@ -1,11 +1,10 @@
 {
     "fields": {
-      "project": {
-        "key": "SB"
-      },
-      "summary": "Automatic result import from automation run",
-      "issuetype": {
-        "name": "Test Execution"
-      }
+        "summary": "Brand new Test execution",
+        "issuetype": { "id": "10007" },
+        "components": [
+            { "name": "Interface" },
+            { "name": "Core" }
+        ]
     }
-  }
+}
