@@ -33,8 +33,7 @@ jobs:
          xrayBaseUrl: "https://asd-tangle.atlassian.net/"
          testFormat: "nunit"
          testPaths: "**/test/e2e/reports/*.xml"
-         testExecKey: "ESM-101"
+         testExecKey: "ESM-100"
          projectKey: "ESM"
-         testExecutionJson: "/test/e2e/info.json"
 
 
