@@ -26,9 +26,9 @@ jobs:
       run: npm run e2e
     - name: "Import results to Xray"
       env:
-         username: ${{ secrets.JIRA_USERNAME }}
-         password: ${{ secrets.JIRA_PASSWORD }}
+         JIRA_USERNAME: ${{ secrets.JIRA_USERNAME }}
+         JIRA_PASSWORD: ${{ secrets.JIRA_PASSWORD }}
          xrayBaseUrl: "https://asd-tangle.atlassian.net/"
-      run: 'curl -H "Content-Type: multipart/form-data" -u $username:$password -F "file=**/test/e2e/reports/*.spec.xml" "$xrayBaseUrl/rest/raven/1.0/import/execution/junit?projectKey=ESM&testExecKey=ESM-102"'
+      run: 'curl -H "Content-Type: multipart/form-data" -u $JIRA_USERNAME:$JIRA_PASSWORD -F "file=**/test/e2e/reports/*.spec.xml" "$xrayBaseUrl/rest/raven/1.0/import/execution/junit?projectKey=ESM&testExecKey=ESM-102"'
 
 
