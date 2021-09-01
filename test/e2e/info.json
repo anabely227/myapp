@@ -1,0 +1,11 @@
+{
+    "fields": {
+      "project": {
+        "key": "SB"
+      },
+      "summary": "Automatic result import from automation run",
+      "issuetype": {
+        "name": "Test Execution"
+      }
+    }
+  }
