@@ -35,6 +35,6 @@ jobs:
          testPaths: "**/test/e2e/reports/*.xml"
          testExecKey: "ESM-101"
          projectKey: "ESM"
-         testExecutionJson: "/test/e2e/info.json"
+         testExecutionJson: "**/test/e2e/info.json"
 
 
