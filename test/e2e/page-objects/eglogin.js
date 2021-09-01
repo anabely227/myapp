@@ -5,7 +5,7 @@ const myLoginCommands = {
                 .setValue('@inputUserName', username)
                 .setValue('@inputPassword', password)
                 .click('@submit')
-                .waitForElementNotPresent('@submit',1000)
+                .waitForElementNotPresent('@submit',2000)
   },
 }
 
@@ -25,9 +25,5 @@ module.exports = {
     forgotPassword: {
      selector: 'a[class="c533124ae c92fbc01d c464950c7"]'
     }
-  },
-
-afterEach: (browser) => {
-   browser.end();
- }
+  }
 };

@@ -14,6 +14,7 @@ module.exports = {
     server_path: require('selenium-server').path,
     host: '127.0.0.1',
     port: 4444,
+    silent: true,
     cli_args: {
       'webdriver.chrome.driver': require('chromedriver').path
     }
@@ -28,6 +29,11 @@ module.exports = {
         waitForConditionTimeout: 5000,
         devServerURL: 'http://localhost:' + (process.env.PORT || config.dev.port)
       },
+      test_workers: {
+        enabled: true,
+        workers: 'auto'
+      },
+      
       screenshots: {
         enabled: true,
         path: "test/e2e/screenshots",
@@ -50,6 +56,6 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true
       }
-    }
+    },
   }
 }
