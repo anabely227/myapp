@@ -31,7 +31,7 @@ jobs:
          password: ${{ secrets.JIRA_PASSWORD }}
          xrayCloud: "false"
          xrayBaseUrl: "https://asd-tangle.atlassian.net/"
-         testFormat: "junit"
+         testFormat: "nunit"
          testPaths: "**/test/e2e/reports/*.xml"
          testExecKey: "ESM-101"
          projectKey: "ESM"
