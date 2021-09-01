@@ -24,3 +24,16 @@ jobs:
       run: npm run unit
     - name: e2e
       run: npm run e2e
+    - name: "Import results to Xray"
+      uses: mikepenz/xray-action@v1.1.2
+      with:
+         username: ${{ secrets.JIRA_USERNAME }}
+         password: ${{ secrets.JIRA_PASSWORD }}
+         xrayCloud: "false"
+         xrayBaseUrl: "https://asd-tangle.atlassian.net/"
+         testFormat: "junit"
+         testPaths: "**/test/*.xml"
+         testExecKey: "ESM-101"
+         projectKey: "ESM"
+
+
