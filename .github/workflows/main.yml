@@ -32,7 +32,7 @@ jobs:
          xrayCloud: "false"
          xrayBaseUrl: "https://asd-tangle.atlassian.net/"
          testFormat: "junit"
-         testPaths: "**/test/e2e/reports*.xml"
+         testPaths: "**/test/e2e/reports/*.xml"
          testExecKey: "ESM-101"
          projectKey: "ESM"
 
